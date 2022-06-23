@@ -1,0 +1,130 @@
+;;
+;; UINT cases
+;;
+
+() do_1() method_id {
+    set_data(begin_cell()
+        .store_uint(1, 32)
+        .end_cell()
+    );
+}
+
+() do_2() method_id {
+    set_data(begin_cell()
+        .store_uint(233, 32)
+        .end_cell()
+    );
+}
+
+() do_3() method_id {
+    set_data(begin_cell()
+        .store_uint(1231233123, 32)
+        .end_cell()
+    );
+}
+
+() do_4() method_id {
+    set_data(begin_cell()
+        .store_uint(3231, 12)
+        .end_cell()
+    );
+}
+
+() do_5() method_id {
+    set_data(begin_cell()
+        .store_uint(4095, 12)
+        .end_cell()
+    );
+}
+
+() do_6() method_id {
+    set_data(begin_cell()
+        .store_uint(4095, 15)
+        .end_cell()
+    );
+}
+
+() do_7() method_id {
+    set_data(begin_cell()
+        .store_uint(21312398126389717239612938712983712387612937123, 255)
+        .end_cell()
+    );
+}
+
+;;
+;; INT cases
+;;
+
+() do_8() method_id {
+    set_data(begin_cell()
+        .store_int(1, 32)
+        .end_cell()
+    );
+}
+
+() do_9() method_id {
+    set_data(begin_cell()
+        .store_int(233, 32)
+        .end_cell()
+    );
+}
+
+() do_10() method_id {
+    set_data(begin_cell()
+        .store_int(1231233123, 32)
+        .end_cell()
+    );
+}
+
+() do_11() method_id {
+    set_data(begin_cell()
+        .store_int(3231, 13)
+        .end_cell()
+    );
+}
+
+() do_12() method_id {
+    set_data(begin_cell()
+        .store_int(4095, 13)
+        .end_cell()
+    );
+}
+
+() do_13() method_id {
+    set_data(begin_cell()
+        .store_int(4095, 17)
+        .end_cell()
+    );
+}
+
+() do_14() method_id {
+    set_data(begin_cell()
+        .store_int(21312398126389717239612938712983712387612937123, 255)
+        .end_cell()
+    );
+}
+
+() do_15() method_id {
+    set_data(begin_cell()
+        .store_int(-21312398126389717239612938712983712387612937123, 255)
+        .end_cell()
+    );
+}
+
+() do_16() method_id {
+    set_data(begin_cell()
+        .store_int(-1, 1)
+        .end_cell()
+    );
+}
+
+() do_17() method_id {
+    set_data(begin_cell()
+        .store_int(-1231233123, 32)
+        .end_cell()
+    );
+}
+
+() recv_internal() impure {
+    ;; Empty
+}

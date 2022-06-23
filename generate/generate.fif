@@ -1,0 +1,159 @@
+PROGRAM{
+  72842 DECLMETHOD do_1
+  77033 DECLMETHOD do_2
+  81096 DECLMETHOD do_3
+  85039 DECLMETHOD do_4
+  89102 DECLMETHOD do_5
+  93293 DECLMETHOD do_6
+  97356 DECLMETHOD do_7
+  101795 DECLMETHOD do_8
+  105858 DECLMETHOD do_9
+  94190 DECLMETHOD do_10
+  98255 DECLMETHOD do_11
+  85932 DECLMETHOD do_12
+  89997 DECLMETHOD do_13
+  77674 DECLMETHOD do_14
+  81739 DECLMETHOD do_15
+  69416 DECLMETHOD do_16
+  73481 DECLMETHOD do_17
+  DECLPROC recv_internal
+  do_1 PROC:<{
+    // 
+    1 PUSHINT	//  _0=1
+    NEWC	//  _0=1 _1
+    32 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_2 PROC:<{
+    // 
+    233 PUSHINT	//  _0=233
+    NEWC	//  _0=233 _1
+    32 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_3 PROC:<{
+    // 
+    1231233123 PUSHINT	//  _0=1231233123
+    NEWC	//  _0=1231233123 _1
+    32 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_4 PROC:<{
+    // 
+    3231 PUSHINT	//  _0=3231
+    NEWC	//  _0=3231 _1
+    12 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_5 PROC:<{
+    // 
+    12 PUSHPOW2DEC	//  _0=4095
+    NEWC	//  _0=4095 _1
+    12 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_6 PROC:<{
+    // 
+    12 PUSHPOW2DEC	//  _0=4095
+    NEWC	//  _0=4095 _1
+    15 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_7 PROC:<{
+    // 
+    21312398126389717239612938712983712387612937123 PUSHINT	//  _0=21312398126389717239612938712983712387612937123
+    NEWC	//  _0=21312398126389717239612938712983712387612937123 _1
+    255 STU	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_8 PROC:<{
+    // 
+    1 PUSHINT	//  _0=1
+    NEWC	//  _0=1 _1
+    32 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_9 PROC:<{
+    // 
+    233 PUSHINT	//  _0=233
+    NEWC	//  _0=233 _1
+    32 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_10 PROC:<{
+    // 
+    1231233123 PUSHINT	//  _0=1231233123
+    NEWC	//  _0=1231233123 _1
+    32 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_11 PROC:<{
+    // 
+    3231 PUSHINT	//  _0=3231
+    NEWC	//  _0=3231 _1
+    13 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_12 PROC:<{
+    // 
+    12 PUSHPOW2DEC	//  _0=4095
+    NEWC	//  _0=4095 _1
+    13 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_13 PROC:<{
+    // 
+    12 PUSHPOW2DEC	//  _0=4095
+    NEWC	//  _0=4095 _1
+    17 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_14 PROC:<{
+    // 
+    21312398126389717239612938712983712387612937123 PUSHINT	//  _0=21312398126389717239612938712983712387612937123
+    NEWC	//  _0=21312398126389717239612938712983712387612937123 _1
+    255 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_15 PROC:<{
+    // 
+    -21312398126389717239612938712983712387612937123 PUSHINT	//  _0=-21312398126389717239612938712983712387612937123
+    NEWC	//  _0=-21312398126389717239612938712983712387612937123 _1
+    255 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_16 PROC:<{
+    // 
+    -1 PUSHINT	//  _0=-1
+    NEWC	//  _0=-1 _1
+    1 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  do_17 PROC:<{
+    // 
+    -1231233123 PUSHINT	//  _0=-1231233123
+    NEWC	//  _0=-1231233123 _1
+    32 STI	//  _3
+    ENDC	//  _4
+    c4 POP
+  }>
+  recv_internal PROC:<{
+    // 
+  }>
+}END>c
