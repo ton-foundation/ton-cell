@@ -25,7 +25,7 @@ import { getSelectorForMethod, runTVM } from 'ton-contract-executor';
     }
 
     console.log('Runnging generator...');
-    for (let i = 0; i < 17; i++) {
+    for (let i = 0; i < 21; i++) {
         console.log('Case ' + (i + 1));
         let res = await runDebug('do_' + (i + 1));
         console.log('Output: ' + res);

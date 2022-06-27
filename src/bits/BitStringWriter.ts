@@ -22,7 +22,7 @@ export class BitStringWriter {
         return this.#offset;
     }
 
-    storeBit = (value: number | boolean) => {
+    storeBit = (value: number | boolean): BitStringWriter => {
         if (this.#ended) {
             throw Error('Writer already closed');
         }
@@ -38,9 +38,10 @@ export class BitStringWriter {
             // Set bit to ONE
             this.#target[(offset / 8) | 0] |= 1 << (7 - (offset % 8));
         }
+        return this;
     }
 
-    storeBits = (value: (boolean | number)[] | BitString) => {
+    storeBits = (value: (boolean | number)[] | BitString): BitStringWriter => {
         if (Array.isArray(value)) {
             for (let v of value) {
                 this.storeBit(v);
@@ -50,16 +51,17 @@ export class BitStringWriter {
                 this.storeBit(value.at(i));
             }
         }
+        return this;
     }
 
-    storeUInt = (value: number | BN, bits: number) => {
+    storeUInt = (value: number | BN, bits: number): BitStringWriter => {
         let v = new BN(value);
         if (v.ltn(0)) {
             throw Error('Unable to store negative value as uint');
         }
         if (bits == 0 || (value.toString(2).length > bits)) {
             if (v.isZero()) {
-                return;
+                return this;
             }
             throw Error(`bits is too small for a value ${v.toString()}. Got ${bits}, expected >= ${value.toString(2).length}`);
         }
@@ -67,18 +69,19 @@ export class BitStringWriter {
         for (let i = 0; i < bits; i++) {
             this.storeBit(s[i] === '1');
         }
+        return this;
     }
 
-    storeInt = (value: number | BN, bits: number) => {
+    storeInt = (value: number | BN, bits: number): BitStringWriter => {
         let v = new BN(value);
         if (bits == 1) {
             if (v.eq(new BN(-1))) {
                 this.storeBit(true);
-                return;
+                return this;
             }
             if (v.isZero()) {
                 this.storeBit(false);
-                return;
+                return this;
             }
             throw Error(`bits is too small for a value ${v}`);
         } else {
@@ -92,15 +95,17 @@ export class BitStringWriter {
                 this.storeUInt(v, bits - 1);
             }
         }
+        return this;
     }
 
-    storeBuffer = (buffer: Buffer) => {
+    storeBuffer = (buffer: Buffer): BitStringWriter => {
         for (let i = 0; i < buffer.length; i++) {
             this.storeUInt(buffer[i], 8);
         }
+        return this;
     }
 
-    storeVarUInt = (value: BN | number, headerBits: number) => {
+    storeVarUInt = (value: BN | number, headerBits: number): BitStringWriter => {
         let v = new BN(value);
         if (v.eq(new BN(0))) {
             this.storeUInt(0, headerBits);
@@ -113,10 +118,12 @@ export class BitStringWriter {
             this.storeUInt(l, headerBits);
             this.storeBuffer(Buffer.from(h, 'hex'));
         }
+        return this;
     }
 
-    storeCoins = (value: BN | number) => {
+    storeCoins = (value: BN | number): BitStringWriter => {
         this.storeVarUInt(value, 4);
+        return this;
     }
 
     endString = () => {

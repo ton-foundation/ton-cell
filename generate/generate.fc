@@ -125,6 +125,35 @@
     );
 }
 
+() do_18() method_id {
+    set_data(begin_cell()
+        .store_grams(0)
+        .end_cell()
+    );
+}
+
+
+() do_19() method_id {
+    set_data(begin_cell()
+        .store_grams(1)
+        .end_cell()
+    );
+}
+
+() do_20() method_id {
+    set_data(begin_cell()
+        .store_grams(10000000)
+        .end_cell()
+    );
+}
+
+() do_21() method_id {
+    set_data(begin_cell()
+        .store_grams(1000000012312321312455123451)
+        .end_cell()
+    );
+}
+
 () recv_internal() impure {
     ;; Empty
 }

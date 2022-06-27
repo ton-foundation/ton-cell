@@ -16,6 +16,10 @@ PROGRAM{
   81739 DECLMETHOD do_15
   69416 DECLMETHOD do_16
   73481 DECLMETHOD do_17
+  126694 DECLMETHOD do_18
+  130759 DECLMETHOD do_19
+  80573 DECLMETHOD do_20
+  76444 DECLMETHOD do_21
   DECLPROC recv_internal
   do_1 PROC:<{
     // 
@@ -151,6 +155,38 @@ PROGRAM{
     NEWC	//  _0=-1231233123 _1
     32 STI	//  _3
     ENDC	//  _4
+    c4 POP
+  }>
+  do_18 PROC:<{
+    // 
+    NEWC	//  _0
+    0 PUSHINT	//  _0 _1=0
+    STGRAMS	//  _2
+    ENDC	//  _3
+    c4 POP
+  }>
+  do_19 PROC:<{
+    // 
+    NEWC	//  _0
+    1 PUSHINT	//  _0 _1=1
+    STGRAMS	//  _2
+    ENDC	//  _3
+    c4 POP
+  }>
+  do_20 PROC:<{
+    // 
+    NEWC	//  _0
+    10000000 PUSHINT	//  _0 _1=10000000
+    STGRAMS	//  _2
+    ENDC	//  _3
+    c4 POP
+  }>
+  do_21 PROC:<{
+    // 
+    NEWC	//  _0
+    1000000012312321312455123451 PUSHINT	//  _0 _1=1000000012312321312455123451
+    STGRAMS	//  _2
+    ENDC	//  _3
     c4 POP
   }>
   recv_internal PROC:<{
