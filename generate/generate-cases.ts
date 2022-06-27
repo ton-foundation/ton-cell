@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { Cell } from 'ton';
 import * as compiler from 'ton-compiler';
 import { getSelectorForMethod, runTVM } from 'ton-contract-executor';
 
@@ -28,6 +29,8 @@ import { getSelectorForMethod, runTVM } from 'ton-contract-executor';
     for (let i = 0; i < 21; i++) {
         console.log('Case ' + (i + 1));
         let res = await runDebug('do_' + (i + 1));
+        let hash = Cell.fromBoc(Buffer.from(res, 'base64'))[0].hash();
         console.log('Output: ' + res);
+        console.log('Hash: ' + hash.toString('base64'));
     }
 })();
